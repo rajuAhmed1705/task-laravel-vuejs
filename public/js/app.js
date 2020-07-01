@@ -1968,6 +1968,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
@@ -67126,81 +67155,139 @@ var render = function() {
         "nav",
         { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
         [
-          _c("div", { staticClass: "collapse navbar-collapse" }, [
-            _c(
-              "div",
-              { staticClass: "navbar-nav" },
-              [
-                _c(
-                  "router-link",
-                  { staticClass: "nav-item nav-link", attrs: { to: "/" } },
-                  [_vm._v("Home")]
-                ),
-                _vm._v(" "),
-                _vm.authenticated
-                  ? [
+          _c(
+            "router-link",
+            { staticClass: "navbar-brand", attrs: { to: "/" } },
+            [_vm._v("Task Manager")]
+          ),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse",
+              attrs: { id: "navbarSupportedContent" }
+            },
+            [
+              _c(
+                "ul",
+                { staticClass: "navbar-nav mr-auto" },
+                [
+                  _c(
+                    "li",
+                    { staticClass: "nav-item active" },
+                    [
                       _c(
                         "router-link",
-                        {
-                          staticClass: "nav-item nav-link",
-                          attrs: { to: "/task" }
-                        },
-                        [_vm._v("Task")]
-                      ),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "navbar-text" }, [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(_vm.user.name) +
-                            "\n                    "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link",
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.signOut($event)
-                            }
-                          }
-                        },
-                        [_vm._v("sign out")]
-                      )
-                    ]
-                  : [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-item nav-link",
-                          attrs: { to: "/signin" }
-                        },
-                        [_vm._v("Sign In")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-item nav-link",
-                          attrs: { to: "/signup" }
-                        },
-                        [_vm._v("Sign Up")]
+                        { staticClass: "nav-link", attrs: { to: "/" } },
+                        [
+                          _vm._v("Home\n                        "),
+                          _c("span", { staticClass: "sr-only" }, [
+                            _vm._v("(current)")
+                          ])
+                        ]
                       )
                     ],
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  { staticClass: "nav-item nav-link", attrs: { to: "/about" } },
-                  [_vm._v("About")]
-                )
-              ],
-              2
-            )
-          ])
-        ]
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm.authenticated
+                    ? [
+                        _c(
+                          "li",
+                          { staticClass: "nav-item" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: { to: "/task" }
+                              },
+                              [_vm._v("Task")]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "nav-item" }, [
+                          _c(
+                            "a",
+                            { staticClass: "nav-link", attrs: { to: "/task" } },
+                            [_vm._v(_vm._s(_vm.user.name))]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "nav-item" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "nav-link",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.signOut($event)
+                                }
+                              }
+                            },
+                            [_vm._v("Sign Out")]
+                          )
+                        ])
+                      ]
+                    : [
+                        _c(
+                          "li",
+                          { staticClass: "nav-item" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: { to: "/signin" }
+                              },
+                              [_vm._v("Sign In")]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          { staticClass: "nav-item" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: { to: "/signup" }
+                              },
+                              [_vm._v("Sign Up")]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        { staticClass: "nav-link", attrs: { to: "/about" } },
+                        [_vm._v("About")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                2
+              )
+            ]
+          )
+        ],
+        1
       ),
       _vm._v(" "),
       _c("br"),
@@ -67226,6 +67313,26 @@ var staticRenderFns = [
           _vm._v("Task Manager")
         ])
       ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarSupportedContent",
+          "aria-controls": "navbarSupportedContent",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
   }
 ]

@@ -4,34 +4,63 @@
             <span class="text-secondary heading">Task Manager</span>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse">
-                <div class="navbar-nav">
-                    <router-link to="/" class="nav-item nav-link"
-                        >Home</router-link
-                    >
+            <router-link class="navbar-brand" to="/">Task Manager</router-link>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <router-link class="nav-link" to="/"
+                            >Home
+                            <span class="sr-only">(current)</span></router-link
+                        >
+                    </li>
                     <template v-if="authenticated">
-                        <router-link to="/task" class="nav-item nav-link"
-                            >Task</router-link
-                        >
-                        <span class="navbar-text">
-                            {{ user.name }}
-                        </span>
-                        <a class="nav-link" href="#" @click.prevent="signOut"
-                            >sign out</a
-                        >
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/task"
+                                >Task</router-link
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" to="/task">{{ user.name }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                @click.prevent="signOut"
+                                >Sign Out</a
+                            >
+                        </li>
                     </template>
                     <template v-else>
-                        <router-link to="/signin" class="nav-item nav-link"
-                            >Sign In</router-link
-                        >
-                        <router-link to="/signup" class="nav-item nav-link"
-                            >Sign Up</router-link
-                        >
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/signin"
+                                >Sign In</router-link
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/signup"
+                                >Sign Up</router-link
+                            >
+                        </li>
                     </template>
-                    <router-link to="/about" class="nav-item nav-link"
-                        >About</router-link
-                    >
-                </div>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/about"
+                            >About</router-link
+                        >
+                    </li>
+                </ul>
             </div>
         </nav>
         <br />
