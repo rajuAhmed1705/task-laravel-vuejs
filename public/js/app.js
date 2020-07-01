@@ -1994,9 +1994,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
@@ -67149,8 +67146,6 @@ var render = function() {
     "div",
     { staticClass: "container" },
     [
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "nav",
         { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
@@ -67161,7 +67156,7 @@ var render = function() {
             [_vm._v("Task Manager")]
           ),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
@@ -67298,23 +67293,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "text-center",
-        staticStyle: { margin: "20px 0px 20px 0px" }
-      },
-      [
-        _c("span", { staticClass: "text-secondary heading" }, [
-          _vm._v("Task Manager")
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -67850,7 +67828,7 @@ var render = function() {
     },
     [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("Name")]),
+        _c("label", { attrs: { for: "exampleInputName" } }, [_vm._v("Name")]),
         _vm._v(" "),
         _c("input", {
           directives: [
@@ -67864,7 +67842,7 @@ var render = function() {
           staticClass: "form-control",
           attrs: {
             type: "text",
-            id: "exampleInputEmail1",
+            id: "exampleInputName",
             "aria-describedby": "emailHelp"
           },
           domProps: { value: _vm.form.name },
@@ -67940,7 +67918,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "exampleInputPassword1" } }, [
+        _c("label", { attrs: { for: "exampleInputPasswordConfirm" } }, [
           _vm._v("Confirm Password")
         ]),
         _vm._v(" "),
@@ -67954,7 +67932,7 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "password", id: "exampleInputPassword1" },
+          attrs: { type: "password", id: "exampleInputPasswordConfirm" },
           domProps: { value: _vm.form.password_confirmation },
           on: {
             input: function($event) {

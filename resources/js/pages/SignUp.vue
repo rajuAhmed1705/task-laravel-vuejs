@@ -1,11 +1,11 @@
 <template>
     <form @submit.prevent="submit">
         <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
+            <label for="exampleInputName">Name</label>
             <input
                 type="text"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="exampleInputName"
                 aria-describedby="emailHelp"
                 v-model="form.name"
             />
@@ -30,11 +30,11 @@
             />
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Confirm Password</label>
+            <label for="exampleInputPasswordConfirm">Confirm Password</label>
             <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="exampleInputPasswordConfirm"
                 v-model="form.password_confirmation"
             />
         </div>
