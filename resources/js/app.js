@@ -22,6 +22,9 @@ window.eventBus = new Vue();
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
+import store from "./store/index";
+require("./store/subscriber");
+
 const router = new VueRouter({
     mode: "history",
     routes: routes,
@@ -30,5 +33,6 @@ const router = new VueRouter({
 const app = new Vue({
     el: "#app",
     router: router,
+    store,
     render: (h) => h(App),
 });

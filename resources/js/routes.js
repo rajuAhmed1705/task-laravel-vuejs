@@ -1,6 +1,8 @@
 import Home from "./pages/Home.vue";
 import About from "./pages/About.vue";
 import Task from "./pages/Task.vue";
+import SignIn from "./pages/SignIn.vue";
+import store from "./store";
 
 export const routes = [
     {
@@ -17,5 +19,18 @@ export const routes = [
         name: "task",
         path: "/task",
         component: Task,
+        beforeEnter: (to, from, next) => {
+            if (!store.getters["auth/authenticated"]) {
+                return next({
+                    name: "signin",
+                });
+            }
+            next();
+        },
+    },
+    {
+        name: "signin",
+        path: "/signin",
+        component: SignIn,
     },
 ];

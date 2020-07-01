@@ -20,3 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('tasks', 'TaskController');
 Route::post('/register','Api\AuthController@register');
 Route::post('/login','Api\AuthController@login');
+
+$router->group(['middleware' => 'auth:api'], function () use ($router) {
+    Route::get('/logout', 'Api\AuthController@logout');
+});
