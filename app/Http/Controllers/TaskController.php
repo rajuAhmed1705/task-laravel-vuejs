@@ -14,7 +14,7 @@ class TaskController extends Controller
      */
      public function index()
     {
-        $task = Task::all();
+        $task = auth()->user()->tasks()->get();
         // dd(count($task));
         if (count($task) == 0) {
             return response('no content',204);
@@ -46,7 +46,8 @@ class TaskController extends Controller
             'isComplete' => 'boolean',
         ]);
 
-        $task = Task::create($validatedData);
+        $task = new Task($validatedData);
+        auth()->user()->tasks()->save($task);
 
         return response($task,201);
     }

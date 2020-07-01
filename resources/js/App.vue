@@ -24,6 +24,9 @@
                         <router-link to="/signin" class="nav-item nav-link"
                             >Sign In</router-link
                         >
+                        <router-link to="/signup" class="nav-item nav-link"
+                            >Sign Up</router-link
+                        >
                     </template>
                     <router-link to="/about" class="nav-item nav-link"
                         >About</router-link

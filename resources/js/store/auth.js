@@ -39,6 +39,16 @@ export default {
                 commit("SET_USER", null);
             }
         },
+        async signUp({ commit }, credentials) {
+            try {
+                let response = await axios.post("/register", credentials);
+                commit("SET_TOKEN", response.data);
+                commit("SET_USER", response.data);
+            } catch (error) {
+                commit("SET_TOKEN", null);
+                commit("SET_USER", null);
+            }
+        },
         signOut({ commit }) {
             return axios.get("/logout").then(() => {
                 commit("DELETE_TOKEN");

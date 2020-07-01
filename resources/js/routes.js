@@ -2,6 +2,7 @@ import Home from "./pages/Home.vue";
 import About from "./pages/About.vue";
 import Task from "./pages/Task.vue";
 import SignIn from "./pages/SignIn.vue";
+import SignUp from "./pages/SignUp.vue";
 import store from "./store";
 
 export const routes = [
@@ -32,5 +33,10 @@ export const routes = [
         name: "signin",
         path: "/signin",
         component: SignIn,
+    },
+    {
+        name: "signup",
+        path: "/signup",
+        component: SignUp,
     },
 ];

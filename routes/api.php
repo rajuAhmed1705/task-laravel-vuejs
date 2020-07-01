@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('tasks', 'TaskController');
 Route::post('/register','Api\AuthController@register');
 Route::post('/login','Api\AuthController@login');
 
 $router->group(['middleware' => 'auth:api'], function () use ($router) {
+    Route::apiResource('tasks', 'TaskController');
     Route::get('/logout', 'Api\AuthController@logout');
 });
