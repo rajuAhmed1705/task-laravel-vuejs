@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="d-flex justify-content-end">
     <b-button
+      class="w-sm-100"
       v-if="showClearCompletedButton"
       @click="clearCompleted"
       variant="outline-primary"
@@ -24,3 +25,12 @@ export default {
   }
 };
 </script>
+
+<style>
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .w-sm-100 {
+    width: 100%;
+  }
+}
+</style>

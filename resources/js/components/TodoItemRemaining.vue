@@ -1,5 +1,5 @@
 <template>
-  <div>{{ remaining }} item(s) left</div>
+  <div class="content-center">{{ remaining }} item(s) left</div>
 </template>
 
 <script>
@@ -13,3 +13,11 @@ export default {
   }
 };
 </script>
+<style>
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .content-center {
+    text-align: center;
+  }
+}
+</style>

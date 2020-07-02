@@ -1,5 +1,5 @@
 <template>
-    <div><todo></todo></div>
+    <div class="col-md-10 col-sm-12 m-auto"><todo></todo></div>
 </template>
 <script>
 import Todo from "../components/todo";

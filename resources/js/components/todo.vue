@@ -3,11 +3,16 @@
     <!-- <input type="text" placeholder @keyup.enter="addTodo()" v-model="newTodo" /> -->
     <b-form-input v-model="newTodo" placeholder="works to do" @keyup.enter="addTodo()"></b-form-input>
     <todo-item v-for="(todo, index) in todosFiltered" :key="todo.id" :todo="todo" :index="index"></todo-item>
-    <div v-if="showButton" class="d-flex justify-content-between align-items-center mt-3">
-      <todo-item-remaining :remaining="remaining"></todo-item-remaining>
-      <todo-item-filtered></todo-item-filtered>
-      <todo-clear-completed :showClearCompletedButton="showClearCompletedButton"></todo-clear-completed>
-    </div>
+    <template v-if="showButton">
+      <div class="row m-2">
+        <todo-item-remaining class="col-md-4 col-12 mb-2" :remaining="remaining"></todo-item-remaining>
+        <todo-item-filtered class="col-md-4 col-12 mb-2"></todo-item-filtered>
+        <todo-clear-completed
+          class="col-md-4 col-12 mb-2"
+          :showClearCompletedButton="showClearCompletedButton"
+        ></todo-clear-completed>
+      </div>
+    </template>
   </div>
 </template>
 <script>
@@ -148,5 +153,12 @@ export default {
 .completed {
   text-decoration: line-through;
   color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .justify-content-end {
+    justify-content: center !important;
+  }
 }
 </style>
